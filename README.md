@@ -34,7 +34,28 @@ Each glitch is graded on three axes so you know what you're getting into:
 13. [Amazon Vine (free products for reviews)](glitches/13-amazon-vine.md) 🟢
 14. [Prime Household sharing](glitches/14-prime-household.md) 🟢
 
-All 14 glitch files are complete, with sources.
+**Official freebie programs (🟢, always available):**
+
+15. [Fresh grocery promos & price glitches](glitches/15-fresh-grocery-promos.md)
+16. [Gift-card bonus credits](glitches/16-giftcard-bonus-credits.md)
+17. [First Reads / Kindle free books](glitches/17-first-reads-kindle.md)
+18. [Prime Gaming free games & loot](glitches/18-prime-gaming.md)
+19. [Trade-in bonus credits](glitches/19-trade-in-credits.md)
+20. [Outlet / Warehouse / Woot](glitches/20-outlet-warehouse-woot.md)
+21. [Family / Student / EBT discounts](glitches/21-family-student-discounts.md)
+22. [Alexa voice-shopping promos](glitches/22-alexa-voice-promos.md)
+
+**Gray-zone deep hacks (🟡/🟠):**
+
+23. [Prime Try Before You Buy](glitches/23-try-before-buy.md)
+24. [Review-for-freebie groups](glitches/24-review-groups.md)
+25. [Goodwill credits from chat support](glitches/25-customer-service-credits.md)
+26. [Amazon Go store glitches](glitches/26-amazon-go-stores.md)
+27. [Amazon Haul ultra-cheap storefront](glitches/27-amazon-haul.md)
+28. [Reorder discounts](glitches/28-reorder-discounts.md)
+29. [Misc deep hacks](glitches/29-misc-deep-hacks.md)
+
+All 29 glitch files are complete, with sources.
 
 ## Tools
 
