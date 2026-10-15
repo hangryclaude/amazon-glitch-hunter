@@ -7,6 +7,9 @@
 // Usage:
 //   node tools/glitch-hunter.mjs                # one pass over the watchlist
 //   node tools/glitch-hunter.mjs --loop 60      # re-check every 60s
+//   node tools/glitch-hunter.mjs --deals         # list live Amazon "Today's
+//                                                # Deals" with % off + ASINs
+//                                                # (candidates for watchlist)
 //
 // Watchlist format (tools/watchlist.txt): one entry per line, `#` comments:
 //   B08N5WRWNW|25.00          # ASIN | max-price (alert at/below)
@@ -42,11 +45,49 @@ const UAS = [
 
 function parseArgs() {
   const args = process.argv.slice(2);
-  const out = { loop: 0 };
+  const out = { loop: 0, deals: false };
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--loop") out.loop = parseInt(args[i + 1] || "60", 10);
+    if (args[i] === "--deals") out.deals = true;
   }
   return out;
+}
+
+// macOS notification — best effort, ignore failures (non-mac / muted)
+function notify(title, message) {
+  try {
+    execFileSync("osascript", ["-e",
+      `display notification ${JSON.stringify(message)} with title ${JSON.stringify(title)}`]);
+  } catch { /* non-mac or notifications off */ }
+}
+
+// --- Deals discovery: Amazon "Today's Deals" via the jina reader ---------
+function dealsMode(env) {
+  const body = fetchUrl("https://r.jina.ai/https://www.amazon.com/gp/goldbox",
+    env.proxy, ["x-no-cache: true", "x-timeout: 25"]);
+  if (!body || body.length < 500) { console.log("deals: fetch failed"); return; }
+  const re = /\[([^\]]*Deal Price: \$([\d.,]+)[^\]]*)\]\([^)]*\/dp\/([A-Z0-9]{10})/g;
+  const deals = []; const seen = new Set();
+  let m;
+  while ((m = re.exec(body))) {
+    const pct = m[1].match(/(\d+)%\s*off/);
+    // titles appear after "List: List: $XX.XX" in the deal-card text
+    const title = (m[1].split(/List:\s*List:\s*\$[\d.,]+/).pop() || "").trim();
+    const asin = m[3];
+    if (seen.has(asin)) continue;
+    seen.add(asin);
+    deals.push({
+      asin,
+      price: parseFloat(m[2].replace(/,/g, "")),
+      pctOff: pct ? parseInt(pct[1], 10) : 0,
+      title: title.slice(0, 70),
+    });
+  }
+  deals.sort((a, b) => b.pctOff - a.pctOff);
+  for (const d of deals) {
+    console.log(`${String(d.pctOff).padStart(3)}% off  $${d.price.toFixed(2).padStart(8)}  ${d.asin}  ${d.title}`);
+  }
+  console.log(`\n${deals.length} live deals — add any to tools/watchlist.txt as: ASIN|max-price`);
 }
 
 function loadWatchlist() {
@@ -183,7 +224,9 @@ function checkAll(env) {
     const max = entry.max;
     if (price != null && price <= max) {
       if (!seen.has(`${entry.ref}|${price}`)) {
-        console.log(`🚨 GLITCH HIT: ${entry.ref} at $${price.toFixed(2)} (<= $${max}) [${source}] → ${refToUrl(entry.ref)}`);
+        const msg = `${entry.ref} at $${price.toFixed(2)} (<= $${max}) [${source}]`;
+        console.log(`🚨 GLITCH HIT: ${msg} → ${refToUrl(entry.ref)}`);
+        notify("🚨 GLITCH HIT", msg);
         found.push({ ref: entry.ref, price, max, source, at: new Date().toISOString() });
         writeFileSync(FOUND_LOG, JSON.stringify(found, null, 2));
       } else {
@@ -200,12 +243,13 @@ function checkAll(env) {
 }
 
 function main() {
-  const { loop } = parseArgs();
+  const { loop, deals } = parseArgs();
   const env = {
     proxy: process.env.GLITCH_PROXY || process.env.HTTPS_PROXY || "",
     KEEPA_API_KEY: process.env.KEEPA_API_KEY || "",
   };
-  console.log(`glitch-hunter: ${loadWatchlist().length} items | source: ${env.KEEPA_API_KEY ? "keepa → amazon" : "amazon direct (set KEEPA_API_KEY for reliability)"} | proxy/VPN: ${env.proxy || "none (direct)"}`);
+  if (deals) { dealsMode(env); return; }
+  console.log(`glitch-hunter: ${loadWatchlist().length} items | source: ${env.KEEPA_API_KEY ? "keepa → jina → amazon" : "jina → amazon (set KEEPA_API_KEY for max reliability)"} | proxy/VPN: ${env.proxy || "none (direct)"}`);
   if (loop > 0) console.log(`looping every ${loop}s — Ctrl-C to stop`);
   const run = () => checkAll(env);
   run();

@@ -85,9 +85,12 @@ Every glitch is graded:
 # add your targets (ASIN|max-price) to tools/watchlist.txt, then:
 node tools/glitch-hunter.mjs                # one pass
 node tools/glitch-hunter.mjs --loop 600    # watch continuously
+node tools/glitch-hunter.mjs --deals       # list live Today's Deals with
+                                           # % off + ASINs (watchlist seeds)
 ```
 
-- Hits are logged to `tools/glitches-found.json` with timestamps.
+- Hits are logged to `tools/glitches-found.json` with timestamps and fire a
+  **macOS notification**.
 - Three price sources, in order: **Keepa API** (if `KEEPA_API_KEY` is set) →
   **r.jina.ai reader** (bot-check-proof, no key needed) → direct Amazon
   page scrape (fallback).
