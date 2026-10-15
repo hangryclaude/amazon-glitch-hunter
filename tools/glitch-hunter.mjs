@@ -13,9 +13,10 @@
 //   https://amzn.to/xyz|9.99  # full URLs also fine
 //
 // Price sources (in order of reliability):
-//   1. KEEPA_API_KEY env var  → Keepa API (clean JSON, needs free key at keepa.com)
-//   2. Direct amazon.com fetch (may hit Amazon's bot check; works best from a
-//      VPN with a residential-looking IP, or after warming up a browser session)
+//   1. KEEPA_API_KEY env var  → Keepa API (clean JSON, needs key at keepa.com)
+//   2. r.jina.ai reader       → renders Amazon pages off-site; immune to Amazon's
+//                               bot checks (no key needed, free tier is rate-limited)
+//   3. Direct amazon.com fetch (works from clean/VPN residential IPs)
 //
 // VPN / proxy: set GLITCH_PROXY (or HTTPS_PROXY) to route checks through
 // your VPN. Example:
@@ -111,7 +112,25 @@ function priceViaKeepa(asin, key, proxy) {
   }
 }
 
-// --- Price source 2: direct Amazon page scrape -----------------------------
+// --- Price source 2: r.jina.ai reader (bot-check-proof) -------------------
+function priceViaJina(url, proxy) {
+  // x-no-cache: Jina caches pages; a cached bot-check snapshot would poison us.
+  const body = fetchUrl(`https://r.jina.ai/${url}`, proxy,
+    ["x-no-cache: true", "x-timeout: 25"]);
+  if (!body || body.length < 500) return null;
+  // Buybox price renders as "Price ($79.99" in the markdown; fall back to
+  // the first currency amount on the page.
+  const m =
+    body.match(/Price \(\s*\$\s*([\d.,]+)/) ||
+    body.match(/\$\s*([\d,]+\.\d{2})/);
+  if (m) {
+    const val = parseFloat(m[1].replace(/,/g, ""));
+    if (!Number.isNaN(val) && val > 0) return val;
+  }
+  return null;
+}
+
+// --- Price source 3: direct Amazon page scrape -----------------------------
 function priceViaAmazon(url, proxy) {
   const html = fetchUrl(url, proxy, [
     "Sec-Fetch-Dest: document",
@@ -142,6 +161,8 @@ function getPrice(entry, env) {
     const p = priceViaKeepa(asin, env.KEEPA_API_KEY, env.proxy);
     if (p != null) return { price: p, source: "keepa" };
   }
+  const pj = priceViaJina(refToUrl(entry.ref), env.proxy);
+  if (pj != null) return { price: pj, source: "jina" };
   const p = priceViaAmazon(refToUrl(entry.ref), env.proxy);
   if (p != null) return { price: p, source: "amazon" };
   return { price: null, source: "none" };

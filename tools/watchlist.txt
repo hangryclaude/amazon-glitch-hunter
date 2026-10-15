@@ -1,1 +1,9 @@
-B08N5WRWNW|15.00
+# Watchlist for glitch-hunter — thresholds are "screaming deal" levels.
+# A real glitch = 60-90% below normal price. Format: ASIN|MAX_PRICE
+
+# Echo Dot 5th gen (normal ~$50-80) → glitch if ≤ $15
+B09B93ZDG4|15.00
+# Echo Show 8 (normal ~$100-170) → glitch if ≤ $30
+B0DC91H3JK|30.00
+# Fire TV Stick 4K (normal ~$40-60) → glitch if ≤ $12
+B0G4XRP464|12.00

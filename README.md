@@ -74,8 +74,9 @@ GLITCH_PROXY=socks5h://127.0.0.1:7890 node tools/glitch-hunter.mjs
 ```
 
 - Hits are logged to `tools/glitches-found.json` with timestamps.
-- Dual price source: **Keepa API** (if `KEEPA_API_KEY` is set) → direct
-  Amazon page scrape (fallback).
+- Dual price source: **Keepa API** (if `KEEPA_API_KEY` is set) → **r.jina.ai
+  reader** (bot-check-proof, no key needed) → direct Amazon page scrape
+  (fallback).
 - Polite randomized delays + rotating user agents to look less bot-like.
 
 ## How to hunt live price glitches
