@@ -36,6 +36,6 @@ Three official steep-discount membership tracks:
 - Baby Registry Completion Discount 15% terms (official):
   https://www.amazon.com/gp/help/customer/display.html?nodeId=GV4FFW94JAGFL4RH
 - Diaper 20% + Amazon Family details:
-  https://thethriftynorthwestmom.com/benefits-amazon-family-save-diapers-baby-items/
+  https://www.amazon.com/family
 - Prime Student 6-month trial (community roundup):
   https://www.facebook.com/groups/578711521278394/posts/1092219409927600/

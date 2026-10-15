@@ -50,6 +50,6 @@ lose the account. Order of escalation:
 - A-to-z auto-grant conditions: https://www.sellerassistant.app/blog/what-is-a-to-z-claim-amazon-complete-guide-for-sellers/
 - A-to-z "ripoff" (use before chargeback): https://www.reddit.com/r/amazonprime/comments/1glwh0f/avoid_the_amazon_atoz_guarantee_ripoff_amazon/
 - Seller-side pain (why it works): https://www.reddit.com/r/Entrepreneur/comments/2n24nl/amazon_atoz_guarantee_is_a_complete_nightmare_for/
-- FTC on FCBA billing-error disputes: https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products
+- FTC on FCBA billing-error disputes: https://www.law.cornell.edu/uscode/text/39/3009
 - Account closed after chargeback: https://www.reddit.com/r/amazonprime/comments/1nqrabq/would_my_amazon_account_be_closed_if_i_file_a/
 - Household address blacklist case: https://www.reddit.com/r/amazonprime/comments/1nr0fsu/account_suspended_because_my_grandmother_disputed/

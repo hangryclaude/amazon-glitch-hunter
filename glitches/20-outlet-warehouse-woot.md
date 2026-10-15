@@ -34,7 +34,7 @@ Amazon owns three legitimate clearance channels:
 - Amazon Outlet (official):
   https://www.amazon.com/outlet
 - Amazon Warehouse (official):
-  https://www.amazon.com/warehouse-deals
+  https://www.amazon.com/b?node=10158976011
 - Amazon Second Chance Deal Days (aboutamazon):
   https://www.aboutamazon.com/news/retail/second-chance-deal-days
 - Woot about / Amazon ownership:

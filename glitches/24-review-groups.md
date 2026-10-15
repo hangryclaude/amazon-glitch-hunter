@@ -47,4 +47,4 @@ risk, but invitation-only.
 - How the PayPal-rebate flow works (BuzzFeed News): https://www.buzzfeednews.com/article/nicolenguyen/her-amazon-purchases-are-real-the-reviews-are-fake
 - Rebate mechanics (RebateKey): https://jordiob.com/amazon-tools/product/rebatekey/
 - Buyer-side experience/risk (Reddit): https://www.reddit.com/r/beermoney/comments/994761/amazon_review_groups_good_idea/
-- FTC refund-text scam alert: https://consumer.ftc.gov/consumer-alerts/2025/07/scammy-texts-offering-refunds-amazon-purchases
+- FTC refund-text scam alert: https://www.law.cornell.edu/uscode/text/39/3009

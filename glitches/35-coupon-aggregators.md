@@ -19,7 +19,7 @@ Capital One Shopping watchlists alert on wishlist price drops.
 
 - **Slickdeals** — the fastest human alert network; the $94.48 glitch was
   found and spread there in minutes. Create a Deal Alert on "amazon glitch"
-  keywords. https://slickdeals.net · alerts: https://slickdeals.net/alerts/
+  keywords. https://slickdeals.net · alerts: https://slickdeals.net/
 - **Krazy Coupon Lady** — Amazon freebie/coupon roundups, tracks Shopper Panel
   etc. https://thekrazycouponlady.com/tips/money/amazon-shopper-panel
 - **Price-error accounts** — @Pricerrors on X (268k followers), Instagram

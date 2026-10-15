@@ -16,7 +16,7 @@ charts. Set a target price on a wishlisted item and get email/browser push —
 rank history and the API (see §5). Mobile app + extension both work.
 
 - Keepa: https://keepa.com
-- Alert channels & marketplaces: https://taskmonkey.ai/blog/amazon-price-tracker/keepa-vs-camelcamelcamel-vs-honey
+- Alert channels & marketplaces: https://keepa.com/
 - Play Store (marketplace list): https://play.google.com/store/apps/details?id=com.keepa.mobile&hl=en_US
 
 ## 2. CamelCamelCamel watchlists 🟢
@@ -36,7 +36,7 @@ the $94.48 glitch spread. Slickdeals Live shows trending deals in real time.
 Follow @Pricerrors on X and the deal groups ([Glitch 35](35-coupon-aggregators.md))
 for 24/7 human coverage.
 
-- Slickdeals alerts: https://slickdeals.net/alerts/
+- Slickdeals alerts: https://slickdeals.net/
 - Slickdeals Live + trending: https://slickdeals.net
 
 ## 4. Telegram / Discord glitch bots & channels 🟢
@@ -48,7 +48,7 @@ paid groups (Frugal Season, EMoney) use bots + software to snipe within the
 5-minute windows. Cheapest version: X app with @Pricerrors notifications on,
 plus a Discord with #amazon-glitches channels you trust.
 
-- Keepa Telegram alerts: https://taskmonkey.ai/blog/amazon-price-tracker/keepa-vs-camelcamelcamel-vs-honey
+- Keepa Telegram alerts: https://keepa.com/
 - Slickdeals Discord: https://slickdeals.net
 - Group/bot scene overview: https://whop.com/blog/amazon-glitch-deals
 
