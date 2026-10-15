@@ -1,10 +1,15 @@
-# Glitch 11 — No-Rush shipping credits ("free money") 🟢
+# Glitch 11 — No-Rush shipping credits ("free money") 🟢/🟡
 
 **Category:** Prime perk
 **Effort:** Zero — just click a different button at checkout
-**Risk:** None. Amazon's own offer.
+**Risk:** None. Amazon's own offer. (Reward value now variable — see update below.)
 
 ## How it works
+
+> **2026 update (verified Oct 2026):** the guaranteed **$1 digital credit is
+> no longer consistent** — the perk is still live but frequently replaced by
+> instant order discounts, account-targeted offers, or ~1% delayed-shipping
+> rewards with Amazon-branded cards. Expect the *perk*, not the fixed dollar.
 
 Prime members at checkout can choose **FREE No-Rush Shipping** instead of
 fast shipping. In exchange, Amazon credits your account with a **promotional

@@ -1,4 +1,4 @@
-# Glitch 23 — Prime Try Before You Buy (RIP) 🟡
+# Glitch 23 — Prime Try Before You Buy (RIP) 💀 ended Jan 31, 2025
 
 **Category:** Amazon program, killed by abuse
 **Effort:** Was zero — it was a legit Prime perk

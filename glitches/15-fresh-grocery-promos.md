@@ -1,4 +1,10 @@
-# Glitch 15 — Amazon Fresh grocery promos & perishable price glitches 🟢
+# Glitch 15 — Amazon Fresh grocery promos & perishable price glitches 🟢/🟡
+
+> **2026 update (verified Oct 2026):** no stable public first-order code
+> exists anymore — promos are now mostly targeted or item-scoped (currently:
+> free delivery on first Fresh order $50+ with Prime; rotating item promos
+> like $10 off $30+ selected grocery). The Prime Access $5-off-$25 monthly
+> credit expired Oct 1, 2026. Old codes like `GROCERY10` are not verified current.
 
 **Category:** Grocery promo / price glitch
 **Effort:** Low — watch for targeted credits and codes

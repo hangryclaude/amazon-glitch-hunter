@@ -69,7 +69,7 @@ Every glitch is graded:
 
 | # | Glitch |
 |---|--------|
-| 23 | [Prime Try Before You Buy](glitches/23-try-before-buy.md) |
+| 23 | [Prime Try Before You Buy](glitches/23-try-before-buy.md) 💀 ended Jan 2025 |
 | 24 | [Review-for-freebie groups](glitches/24-review-groups.md) |
 | 25 | [Goodwill credits from chat support](glitches/25-customer-service-credits.md) |
 | 26 | [Amazon Go store glitches](glitches/26-amazon-go-stores.md) |
@@ -138,6 +138,21 @@ hygiene rules.
     ├── glitch-hunter.mjs  # price-glitch monitor
     └── watchlist.txt      # ASIN|max-price targets
 ```
+
+## Verification (Oct 2026)
+
+Tested end-to-end by parallel AI agents; full evidence in
+[`verification/`](verification/):
+
+- **Tool: 4/4 pass** — live prices via all watchlist items, live `--deals`
+  list, glitch-hit logging + macOS notifications verified, 201/203 source URLs
+  alive (remaining are bot-blocked, none dead)
+- **Claims: 8/8 confirmed** — FTC keep-it law, courtesy credits, the $94.48
+  Prime Day glitch, return-reason refund splits, Vine rules, Returnless
+  Resolutions, Amazon Go glitches, S&S cancel-anytime
+- **Programs: 7 live · 2 changed · 1 dead** — Try Before You Buy ended
+  Jan 31, 2025 (💀 glitch 23); No-Rush credits and Fresh first-order promos
+  still exist but with variable/rotating value (noted in their files)
 
 ## Research provenance
 
