@@ -1,0 +1,5 @@
+# runtime artifacts
+tools/hunter.log
+tools/glitches-found.json
+.DS_Store
+node_modules/
