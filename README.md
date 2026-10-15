@@ -5,7 +5,7 @@
 **Every known Amazon glitch, hack, and exploit that gets you free stuff —
 researched, sourced, and graded by risk.**
 
-29 glitches · automated price monitor · VPN-ready
+36 glitches · automated price monitor · VPN-ready
 
 </div>
 
@@ -76,6 +76,18 @@ Every glitch is graded:
 | 27 | [Amazon Haul ultra-cheap storefront](glitches/27-amazon-haul.md) |
 | 28 | [Reorder discounts](glitches/28-reorder-discounts.md) |
 | 29 | [Misc deep hacks](glitches/29-misc-deep-hacks.md) |
+
+**Deep cuts (international, business, media, history, automation):**
+
+| # | Glitch |
+|---|--------|
+| 30 | [International Amazon storefronts](glitches/30-international-stores.md) |
+| 31 | [Amazon Business perks](glitches/31-amazon-business.md) |
+| 32 | [Prime Video / Audible / Music freebies](glitches/32-prime-video-audible.md) |
+| 33 | [Misgraded Warehouse/Used items](glitches/33-misgraded-used.md) |
+| 34 | [Glitch history archive — the trophy wall](glitches/34-glitch-history-archive.md) |
+| 35 | [Coupon aggregators & rebates](glitches/35-coupon-aggregators.md) |
+| 36 | [Monitoring playbook (Keepa, alerts, bots)](glitches/36-monitoring-playbook.md) |
 
 ## The Tool
 
